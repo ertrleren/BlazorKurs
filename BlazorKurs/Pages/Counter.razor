@@ -8,6 +8,9 @@
 
 @code {
     [Parameter]
+
+    public EventCallback<int> SetCurrentCount{ get; set; }
+
     public string Baslik { get; set; } = "";
 
     private int currentCount = 0;
@@ -15,5 +18,6 @@
     private void IncrementCount()
     {
         currentCount++;
+        SetCurrentCount.InvokeAsync(currentCount);
     }
 }

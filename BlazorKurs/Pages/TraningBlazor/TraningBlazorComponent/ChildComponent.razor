@@ -1,0 +1,24 @@
+﻿<div>
+    <div style="@ElementStyle" class="alert alert-info">@Title</div>
+    <br />
+    <div class="alert alert-heading">@ChildContent</div>
+    <br />
+    <div class="alert alert-light">@Child2Content</div>
+</div>
+
+<GradChildComponent></GradChildComponent>
+
+@code {
+
+    [CascadingParameter]
+    public string ElementStyle { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public RenderFragment Child2Content { get; set; }
+    }
