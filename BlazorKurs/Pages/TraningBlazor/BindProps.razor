@@ -1,6 +1,5 @@
 ﻿@page "/bindprops"
 
-
 Course => @course.CourseName
 <br />
 Price: @course.Price   
@@ -23,8 +22,6 @@ Price: @course.Price
 
 
 
-
-
 @code{
 
     string defaultSelectValue = "Microservice";
@@ -36,8 +33,6 @@ Price: @course.Price
         new DropdownProps{Id=3,Name="Social Media",Value="50"},
         new DropdownProps{Id=4,Name="Dependency Injection",Value="60"},
     };
-
-
 
 
     Models.CourseTraning course = new Models.CourseTraning()

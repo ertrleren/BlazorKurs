@@ -1,5 +1,5 @@
 ﻿@page "/"
-
+@inject NavigationManager NavigationManager
 
 <h1>Hello, world!</h1>
 
@@ -10,4 +10,14 @@ Welcome to your new app.
 
 <EditDeleteButtonComponent IsAdmin="true"></EditDeleteButtonComponent>
 
+<button class="btn btn-success" @onclick="BtnGit_Click">Counter sayfasına Git</button>
+<hr />
+<a class="btn btn-primary" href="counter">Counter Sayfasına Git Hemen</a>
 
+
+@code {
+    void BtnGit_Click()
+    {
+        NavigationManager.NavigateTo("counter");
+    }
+}
